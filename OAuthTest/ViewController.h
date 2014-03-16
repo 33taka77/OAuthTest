@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GTMOAuthViewControllerTouch.h"
 
 @interface ViewController : UIViewController
+{
+    GTMOAuthAuthentication *mAuth;
+    int mNetworkActivityCounter;
+
+}
+
+- (void)updateUI;
+
+- (void)setAuthentication:(GTMOAuthAuthentication *)auth;
+- (void)signInToHatena;
+- (void)signOut;
+- (BOOL)isSignedIn;
 
 @end
